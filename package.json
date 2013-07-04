@@ -1,0 +1,29 @@
+{
+  "name": "reactapp",
+  "version": "0.1.0",
+  "description": "Example React Application",
+  "main": "lib/index.js",
+  "devDependencies": {
+    "reactify": "0.1.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jordwalke/reactapp.git"
+  },
+  "homepage": "",
+  "keywords": [
+    "react",
+    "browserify",
+    "jsx",
+    "js",
+    "plugin",
+    "transform"
+  ],
+  "author": {
+    "name": "Jordan Walke",
+    "email": "jordojw@gmail.com",
+    "url": "http://github.com/jordwalke"
+  },
+  "license": "MIT"
+}
+
