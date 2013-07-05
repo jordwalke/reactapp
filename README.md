@@ -1,11 +1,11 @@
 reactapp
 ========
   > <h4>
-  > A sample project and fast build system for developing with React and commonJS modules.
+  > A sample project and fast build system for developing with React, JSX and commonJS modules.
   > </h4>
 
 **Goals**:
-  - Rapidly build/develop React applications using commonJS/npm.
+  - Rapidly build/develop React JSX applications using commonJS/npm.
   - Hit refresh to load new experience **instantly**.
   - Low power usage (no expensive watching/repackaging every time files change)
   - Every fork should *just work* on Mac/Linux/Windows/rawgithub.
