@@ -4,10 +4,6 @@ reactapp
   > A sample project and fast build system for developing with React and commonJS modules.
   > </h4>
 
-**Non-goals**:
-  - To use packager X, web server Y, module loader Z, build system Q.
-  - These technologies are implementation details of reactapp.
-
 **Goals**:
   - Rapidly build/develop React applications using commonJS/npm.
   - Hit refresh to load new experience **instantly**.
@@ -18,6 +14,9 @@ reactapp
 **Stretch Goal**:
   - Develop React apps on non-jailbroken iPad - simply refresh Safari.
   - Google closure compiler (ADVANCED_MODE) testing ground.
+
+**Non-goals**:
+  - To use packager X, web server Y, module loader Z, build system Q. These details will change as better technologies emerge.
 
 
 <h2>Setup</h2>
@@ -36,28 +35,22 @@ reactapp
     npm install                 # install dependencies.
 
 
-<h2>Three Development Options</h2>
-Launch your app using one of the three options.
+<h2>Three App Launch Options</h2>
 
+<h3>#1. Prebuild - no server:</h3>
 
-<h3>#1. Prebuild - (no web server):</h3>
-
-
-- Everything built into one package
-- Trigger package build via command line
+  > One package, built via command line.
 
 
         cd reactapp
         npm install -g browserify
         browserify -t reactify lib/client/clientMain.jsx >> ./build/monolithicBuild.js
-    
-Then open index.html in your browser
+        # Then open index.html in your browser
 
 
 <h3>#2. Express Server:</h3>
 
-- Everything built into one package
-- Automatically packaged on page request
+  > One package, built automatically on page request.
 
 
         cd reactapp
@@ -65,6 +58,6 @@ Then open index.html in your browser
         # open localhost:8080 in your browser
 
 
-<h3>#3. In-Browser Build - (no web server, no prebuild):</h3>
+<h3>#3. In-Browser Build - no server, no build:</h3>
 
 - (Not yet implemented in `reactapp`)
