@@ -38,6 +38,8 @@ Example React application skeleton.
 
 Setup:
 =================================
+
+
     # Step 1 # First clone the React core: (Step will soon go away once in npm).
     git clone https://github.com/jordwalke/npm-react-core
     cd npm-react-core
@@ -62,6 +64,7 @@ Prebuild - (no web server):
 
 - Simple Monolithic Package:
 
+
     cd reactapp
     npm install -g browserify
     browserify -t reactify lib/client/clientMain.jsx >> ./build/monolithicBuild.js
@@ -72,6 +75,7 @@ Express Server:
 =================================
 
 - Automatically repackages/transforms JSX on page load.
+
 
     cd reactapp
     node server/serverMain.js
@@ -85,7 +89,8 @@ In-Browser Build - (no web server, no prebuild):
 
 TODO:
 =================================
-  Improved Development Speed (break up packages) (Not yet working)
+Improved Development Speed (break up packages) (Not yet working)
+
 
     cd reactapp
     browserify -r reactjs > ./build/reactBuild.js
