@@ -1,7 +1,7 @@
 /**
  * @jsx React.DOM
  */
-var React = require('reactjs').React;
+var React = require('react-core').React;
 
 var Button = React.createClass({
   handleClick: function(e) {

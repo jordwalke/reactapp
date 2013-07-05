@@ -1,7 +1,7 @@
 /**
  * @jsx React.DOM
  */
-var React = require('reactjs').React;
+var React = require('react-core').React;
 var Button = require('../components/Button.jsx');
 
 alert('adsf');
