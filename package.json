@@ -4,6 +4,7 @@
   "description": "Example React Application",
   "main": "lib/index.js",
   "devDependencies": {
+    "reactjs": "0.4.0",
     "reactify": "0.1.3"
   },
   "repository": {
