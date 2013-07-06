@@ -1,6 +1,5 @@
 
-
-![reactapp!](./ReactAppLogo.png)
+<img height="276px" src="./ReactAppLogo.png"/>
 
 
 
@@ -37,5 +36,5 @@
 
 | Option 1: Command Line Build                                                                                                                             | Option 2: Web Server                                                | Option 3: In-Browser |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------- |:--------------------------------------------------------------------| :-------------------:|
-| <pre>sudo npm install -g browserify<br>browserify -t reactify \\<br>  lib/client/clientMain.jsx > ./build/monolithicBuild.js<br> open ./index.html</pre> | <pre>node server/serverMain.js<br>open http://localhost:8080</pre>  | `Coming Soon`        |
+| <pre>sudo npm install -g browserify<br>browserify -t reactify \\<br>  lib/client/clientMain.jsx > ./build/build.js<br> open ./index.html</pre> | <pre>node server/serverMain.js<br>open http://localhost:8080</pre>  | `Coming Soon`        |
 
