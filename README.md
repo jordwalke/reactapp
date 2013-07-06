@@ -32,7 +32,7 @@
 
 | Option 1: Command Line Build                                                                                                                             | Option 2: Web Server                                                | Option 3: In-Browser |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------- |:--------------------------------------------------------------------| :-------------------:|
-| <pre>sudo npm install -g browserify<br>browserify -t reactify \\<br>  lib/client/clientMain.jsx > ./build/build.js<br> open ./index.html</pre> | <pre>node server/serverMain.js<br>open http://localhost:8080</pre>  | `Coming Soon`        |
+| <pre>sudo npm install -g browserify<br>./offlineBuild.sh<br> open ./index.html</pre> | <pre>node server/serverMain.js<br>open http://localhost:8080</pre>  | `Coming Soon`        |
 
 
 ###Structure
@@ -41,6 +41,7 @@
       ├── index.html
       ├── package.json
       ├── README.md
+      ├── offlineBuild.sh           # Serverless static build.
       ├── build/
       │   └── build.js
       └── lib/

@@ -3,17 +3,17 @@
  */
 var React = require('react-core').React;
 
-var Button = React.createClass({
+var Widget = React.createClass({
   handleClick: function(e) {
     alert('you clicked');
   },
   render: function() {
     return (
-      <div onClick={this.handleClick} classSet={{Button:true}}>
-        Hello, this is a button
+      <div onClick={this.handleClick} classSet={{Widget:true}}>
+        Hello, this is a Widget
       </div>
     );
   }
 });
 
-module.exports = Button;
+module.exports = Widget;

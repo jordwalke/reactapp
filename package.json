@@ -4,7 +4,8 @@
   "description": "Example React Application",
   "main": "lib/index.js",
   "dependencies": {
-    "react-core": "0.4.0",
+    "react-core": "git://github.com/jordwalke/npm-react-core.git",
+    "browserify": "2.22.0",
     "reactify": "0.1.3",
     "browserify-middleware": "1.13.1",
     "express": "3.3.3"
