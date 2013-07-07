@@ -64,8 +64,7 @@
 
 
 ### Build For Production or Sharing
-> Pre-Build your app for use on CDN, effecient loading without a server, or to allow your committed project to be ran ran instantly without any build process/server.
-
+> Pre-Build your app for use on CDN, or to allow your committed project to be effeciantly loaded server or build process.
 
 | Command Line Build                                                                                                         |
 | :---------------------------------------------------------------------------------------------------------------|
