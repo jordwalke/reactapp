@@ -34,7 +34,7 @@
 
 >  Just hit your browser's refresh button run an always-up-to-date version of your app.
 
-| Option 1: Web Server                                                 | Option 2: In-Browser |
+| Option 1: Web Server                                                 | Option 2: In-Browser (COMING SOON) |
 |:---------------------------------------------------------------------| :--------------------|
 | <pre>node server/serverMain.js<br>open http://localhost:8080</pre>   | `open file://path/to/index.html`        |
 | <ul><li>Dynamically packages/compiles your app on each server request.</li><li>Optional server-side rendering.</li><li>Intelligent caching using `browserify-middleware`.</li></ul> | <ul><li>All compiling performed in the browser.</li><li>No server needed.</li><li>Works on Safari/FF/IE/rawgithub</li></ul>|
