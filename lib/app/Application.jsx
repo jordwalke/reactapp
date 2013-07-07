@@ -5,6 +5,9 @@ var Widget = require('./Widget.jsx');
 var React = require('react-core').React;
 
 var Application = React.createClass({
+  handleClick: function() {
+    alert('You clicked this again!');
+  },
   render: function() {
     var imgStyle = {
       marginLeft: '50%',
@@ -13,7 +16,9 @@ var Application = React.createClass({
       marginTop: 50
     };
     return (
-      <img src="ReactAppLogo.png" style={imgStyle}/>
+      <div onClick={this.handleClick}>
+        <img src="ReactAppLogo.png" style={imgStyle}/>
+      </div>
     );
   }
 });

@@ -2,22 +2,22 @@
 
 
 
+> `reactapp`: Build and test single page `React`/`commonJS` apps that effortlessly
+> render on both the client and the server.
+
+
 **Goals**:
-  - Rapidly build applications with `React`/`JSX`/`commonJS`.
-  - Hit refresh to load new experience **instantly** (no watching file system)
+  - Refresh loads new experience **instantly** (Latest file changes compiled on
+      the fly)
   - *Just Works* on Mac/Linux/Windows.
-  - Server rendering playground.
+  - One-click server rendering.
 
 **Possible Add-Ons**:
-  - Single OS Keyboard shortcut to:
-    - Clone new `reactapp`, open it in browser and text editor.
-    - One second between a new idea and building that idea.
   - Reload/rerender modules as you type in text editor (only the ones that changed).
-
+  - Reload style without page refresh as style files change.
 
 
 <br>
-
 
 
 ###Install
@@ -32,12 +32,13 @@
 
 ### Run and Build on the Fly
 
->  Just hit your browser's refresh button run an always-up-to-date version of your app.
+>  Just hit your browser's refresh button to run an always-up-to-date version of your app.
 
-| Option 1: Web Server                                                 | Option 2: In-Browser (COMING SOON) |
-|:---------------------------------------------------------------------| :--------------------|
-| <pre>node server/serverMain.js<br>open http://localhost:8080</pre>   | `open file://path/to/index.html`        |
-| <ul><li>Dynamically packages/compiles your app on each server request.</li><li>Optional server-side rendering.</li><li>Intelligent caching using `browserify-middleware`.</li></ul> | <ul><li>All compiling performed in the browser.</li><li>No server needed.</li><li>Works on Safari/FF/IE/rawgithub</li></ul>|
+    node server/serverMain.js
+    open http://localhost:8080                     # App rendered on the client.
+    open http://localhost:8080/index.server.html   # App rendered on the server.
+
+    - Dynamically packages/compiles your app on each server request.
 
 
 ###Structure
@@ -53,7 +54,7 @@
       ├── build/
       │   └── build.js
       └── lib/
-          ├── components/           # All application UI components
+          ├── app/                  # All application components, including UI.
           │   └── Application.jsx   # The Top Level Component
           │   └── Widget.jsx        # A View style component.
           ├── client/               # client-only code
@@ -62,12 +63,23 @@
               └── serverMain.jsx
 
 
+### Build You App
+
+`reactapp` considers the `lib/app/Application.jsx` to be your main entry point
+component. Start by editing that file to create your user experience. Add your
+own component directory structure inside of `lib/app/` to your liking.
+
 
 ### Build For Production or Sharing
 > Pre-Build your app for use on CDN, or to allow your committed project to be effeciantly loaded without a server/build-step.
 
-| Command Line Build                                                                                                         |
-| :---------------------------------------------------------------------------------------------------------------|
-| <pre>sudo npm install -g browserify<br>./offlineBuild.sh  # output build/build.js is included in index.html</pre>         |
+        sudo npm install -g browserify
+        ./offlineBuild.sh  # Output build/build.js is included in index.html
+        open index.html    # No server needed now!
 
-
+ `reactapp` seeks to enable you to share your work with others easily. You may
+ wish to run `offlineBuild.sh` each time before you push your branch to a public
+ repo, so that others can easily download and try your app without having to set
+ up a toolchain. If you have a purely client side app (no server side data
+     fetching) `./offlineBuild.sh` will create a "one-click" demoable package
+ for anyone to try in any browser - they only need to open `index.html`.

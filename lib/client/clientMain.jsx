@@ -2,10 +2,12 @@
  * @jsx React.DOM
  */
 var React = require('react-core').React;
-var Application = require('../components/Application.jsx');
+var Application = require('../app/Application.jsx');
 
-// TODO: Use document ready event.
-window.setTimeout(function() {
+/**
+ * TODO: Support IE8.
+ */
+document.addEventListener("DOMContentLoaded", function() {
   React.renderComponent(<Application />, document.getElementById('mainContainer'));
 });
 

@@ -3,16 +3,18 @@
  * @jsx React.DOM
  */
 var React = require('react-core').React;
-var Application = require('../components/Application.jsx');
+var Application = require('../app/Application.jsx');
 
-// TODO: Use document ready event.
-window.setTimeout(function() {
+/**
+ * TODO: Support IE8.
+ */
+document.addEventListener("DOMContentLoaded", function() {
   React.renderComponent(Application(null, null ), document.getElementById('mainContainer'));
 });
 
 module.exports = {};
 
-},{"../components/Application.jsx":2,"react-core":3}],3:[function(require,module,exports){
+},{"../app/Application.jsx":2,"react-core":3}],3:[function(require,module,exports){
 var React = require('./React');
 
 module.exports = {
@@ -77,6 +79,9 @@ var Widget = require('./Widget.jsx');
 var React = require('react-core').React;
 
 var Application = React.createClass({displayName: 'Application',
+  handleClick: function() {
+    alert('You clicked this again!');
+  },
   render: function() {
     var imgStyle = {
       marginLeft: '50%',
@@ -85,7 +90,9 @@ var Application = React.createClass({displayName: 'Application',
       marginTop: 50
     };
     return (
-      React.DOM.img( {src:"ReactAppLogo.png", style:imgStyle}, null)
+      React.DOM.div( {onClick:this.handleClick}, 
+        React.DOM.img( {src:"ReactAppLogo.png", style:imgStyle}, null)
+      )
     );
   }
 });
