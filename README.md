@@ -1,20 +1,10 @@
-<img height="276px" src="./ReactAppLogo.png"/>
+<img height="276px" src="./static_resources/ReactAppLogo.png"/>
 
 
 
-> `reactapp`: Build and test single page `React`/`commonJS` apps that effortlessly
-> render on both the client and the server.
-
-
-**Goals**:
-  - Refresh loads new experience **instantly** (Latest file changes compiled on
-      the fly)
+  - **instantly** package/compile files on each page load with on-the-fly compilation.
   - *Just Works* on Mac/Linux/Windows.
   - One-click server rendering.
-
-**Possible Add-Ons**:
-  - Reload/rerender modules as you type in text editor (only the ones that changed).
-  - Reload style without page refresh as style files change.
 
 
 <br>
@@ -38,7 +28,7 @@
     open http://localhost:8080                     # App rendered on the client.
     open http://localhost:8080/index.server.html   # App rendered on the server.
 
-    - Dynamically packages/compiles your app on each server request.
+- Dynamically packages/compiles your app on each server request.
 
 
 ###Structure
@@ -51,6 +41,7 @@
       ├── package.json
       ├── README.md
       ├── offlineBuild.sh           # Serverless static build.
+      ├── static_resources/         # Shared images/css go here.
       ├── build/
       │   └── build.js
       └── lib/
@@ -63,7 +54,7 @@
               └── serverMain.jsx
 
 
-### Build You App
+### Create Your UI:
 
 `reactapp` considers the `lib/app/Application.jsx` to be your main entry point
 component. Start by editing that file to create your user experience. Add your
@@ -71,15 +62,22 @@ own component directory structure inside of `lib/app/` to your liking.
 
 
 ### Build For Production or Sharing
-> Pre-Build your app for use on CDN, or to allow your committed project to be effeciantly loaded without a server/build-step.
+> Pre-Build your app for use on CDN, or to allow your committed project to be
+> effeciantly loaded without a server/build-step.
 
         sudo npm install -g browserify
         ./offlineBuild.sh  # Output build/build.js is included in index.html
         open index.html    # No server needed now!
 
- `reactapp` seeks to enable you to share your work with others easily. You may
- wish to run `offlineBuild.sh` each time before you push your branch to a public
+You may wish to run `offlineBuild.sh` before you push your branch to a public
  repo, so that others can easily download and try your app without having to set
- up a toolchain. If you have a purely client side app (no server side data
-     fetching) `./offlineBuild.sh` will create a "one-click" demoable package
- for anyone to try in any browser - they only need to open `index.html`.
+ up a toolchain. `./offlineBuild.sh` will create a "one-click" demoable package
+ for anyone to try in any browser - they only need to open `index.html` on their
+ local file system.
+ (If you have a purely client side app (no server side data fetching) this will "just work").
+
+
+**Possible Add-Ons**:
+  - Reload/rerender modules as you type in text editor (only the ones that changed).
+  - Reload style without page refresh as style files change.
+
