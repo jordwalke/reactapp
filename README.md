@@ -2,7 +2,7 @@
 
 
 
-  - **instantly** package/compile files on each page load with on-the-fly compilation.
+  - **instantly** package/compile files on-the-fly.
   - *Just Works* on Mac/Linux/Windows.
   - One-click server rendering.
 
