@@ -1,7 +1,7 @@
 <img height="276px" src="./static_resources/ReactAppLogo.png"/>
 
 
-
+  - Simple, single-page application structure.
   - **instantly** package/compile files on-the-fly.
   - *Just Works* on Mac/Linux/Windows.
   - One-click server rendering.
@@ -38,7 +38,7 @@
 
      reactapp/
       ├── index.html
-      ├── package.json
+      ├── package.json              # Add npm dependencies here.
       ├── README.md
       ├── offlineBuild.sh           # Serverless static build.
       ├── static_resources/         # Shared images/css go here.
@@ -56,9 +56,13 @@
 
 ### Create Your UI:
 
-`reactapp` considers the `lib/app/Application.jsx` to be your main entry point
-component. Start by editing that file to create your user experience. Add your
-own component directory structure inside of `lib/app/` to your liking.
+- `reactapp` allows you to require `JSX` files when rendering on either the client or the server.
+  - `var Widget = require('./Widget.jsx');`
+- `reactapp` considers the `lib/app/Application.jsx` to be your main entry point
+component. Start by editing that file to create your user experience.
+- Add your own component directory structure inside of `lib/app/` to your liking.
+- Build up an applications by composing lower level components into more sophisticated components.
+
 
 
 ### Build For Production or Sharing
