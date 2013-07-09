@@ -24,7 +24,7 @@
 
 >  Just hit your browser's refresh button to run an always-up-to-date version of your app.
 
-    node server/serverMain.js
+    node lib/server/serverMain.js
     open http://localhost:8080                     # App rendered on the client.
     open http://localhost:8080/index.server.html   # App rendered on the server.
 
