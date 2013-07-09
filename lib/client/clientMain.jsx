@@ -13,9 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * @providesModule ReactComponent
- */
-
  * @jsx React.DOM
  */
 var React = require('react-core').React;
